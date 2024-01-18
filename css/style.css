@@ -1,0 +1,117 @@
+/* <general classes> */
+:root {
+  --background-color: #272b30;
+  --main-color: #3a497b;
+  --main-font: 'Comfortaa', cursive;
+  --secondary-font:'Nerko One', cursive;
+
+}
+body {
+  background-color: var(--background-color);
+}
+/* </general classes> */
+
+/* <games section> */
+nav .container {
+  background-color: var(--main-color);
+  border-radius: 50px;
+}
+header img {
+  max-height: 30vh;
+  object-fit: cover;
+  
+}
+nav .container .navbar-brand{
+  font-family: var(--secondary-font);
+  font-size: 1.875rem;
+}
+nav .container ul li a{
+  font-family: var(--main-font);
+  color: #fff;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+  color: #09c;
+}
+.nav-link:focus, .nav-link:hover{
+  color: #09c;
+}
+.home .card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+}
+.home .card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+figcaption .hstack .small{
+  font-size: 1.25rem;
+  color: #fff;
+  font-family: var(--secondary-font);
+}
+figcaption .card-text{
+  font-family: var(--main-font);
+  color: #939598;
+  font-size: .875em;
+  opacity: 0.5;
+  font-weight: 600;
+}
+.badge-color {
+  background-color:#32383e;
+}
+/* </games section> */
+
+/* <game Detail> */
+.details .hstack h1{
+  color: #fff;
+  font-family: var(--secondary-font);
+  font-size: 2.4rem;
+}
+.details #detailsContent div h3,.details #detailsContent div p {
+  color:#fff;
+  font-family: var(--main-font);
+}
+/* </game Detail> */
+
+/* <spinner loading> */
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+     transform: rotate(0deg);
+  }
+  100% {
+     transform: rotate(360deg);
+  }
+}
+/* </spinner loading> */
